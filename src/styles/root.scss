@@ -1,0 +1,1 @@
+#app {  min-height: 100vh;  &::-webkit-scrollbar {    background: transparent;    width: 0;    max-width: 0;    height: 0;  }  &::-webkit-scrollbar-thumb {    background: transparent;    border-bottom-left-radius: 3px;    border-bottom-right-radius: 3px;    width: 0;    height: 0;  }}

@@ -1,0 +1,1 @@
+import { createRoot } from 'react-dom/client';import { App } from './app';function init() {  const wrapper = document.getElementById('app');  if (!wrapper) {    throw new Error('Корневой элемент не найден');  }  const appRoot = createRoot(wrapper);  appRoot.render(<App />);}init();

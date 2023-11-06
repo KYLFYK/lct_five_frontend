@@ -1,0 +1,1 @@
+import { FC } from 'react';import { BrowserRouter, Route, Routes } from 'react-router-dom';import { Paths } from '../constants/paths';import { HomePage } from '../containers/home-page';export const RoutesService: FC = () => {  return (    <BrowserRouter>      <Routes>        <Route path={Paths.BASE} element={<HomePage />} />      </Routes>    </BrowserRouter>  );};

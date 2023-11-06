@@ -1,0 +1,1 @@
+import AntApp from 'antd/lib/app';import { FC } from 'react';import { RoutesService } from './routes-service';import { ThemeService } from './theme-service';export const Services: FC = () => {  return (    <ThemeService>      <AntApp>        <RoutesService />      </AntApp>    </ThemeService>  );};

@@ -1,0 +1,1 @@
+import dayjs from 'dayjs';import 'dayjs/locale/ru';import { FC, StrictMode } from 'react';import { Services } from './services';import './styles/root.scss';import 'antd/dist/reset.css';dayjs.locale('ru');export const App: FC = () => {  return (    <StrictMode>      <Services />    </StrictMode>  );};
