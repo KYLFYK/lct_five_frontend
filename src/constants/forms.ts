@@ -1,0 +1,1 @@
+import { DefaultOptionType } from 'rc-select/lib/Select';export const NODE_TYPE_SELECT_OPTIONS: DefaultOptionType[] = [  {    label: 'Заголовок',    value: 'title',  },  {    label: 'Текст',    value: 'text',  },  {    label: 'Изображение',    value: 'image',  },  {    label: 'Видео',    value: 'video',  },];

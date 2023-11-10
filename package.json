@@ -20,6 +20,7 @@
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@kylfyk/plai_player": "^1.0.3",
     "antd": "^5.10.0",
     "dayjs": "^1.11.10",
     "react": "^18.2.0",

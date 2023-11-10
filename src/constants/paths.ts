@@ -1,1 +1,1 @@
-export enum Paths {  BASE = '/',}
+export enum Paths {  BASE = '/',  STATISTIC = '/stats',  EMPLOYERS = '/employers',  CALENDAR = '/calendar',  TEST = '/test',  TEST_EDIT = '/edit',}

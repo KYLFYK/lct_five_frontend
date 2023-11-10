@@ -1285,6 +1285,20 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@kylfyk/plai_player@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@kylfyk/plai_player/-/plai_player-1.0.3.tgz#f2463ba242423c5bcdf104dd6b26b6f2f7f52248"
+  integrity sha512-lKlqOrk78bmzNdQ27HtynRzbKrInV0o6eMN7oquYlKWa7vizfhRSVc0X+VSuH+YsSOyj75PNtQssuIWqMsjqfw==
+  dependencies:
+    "@ant-design/icons" "^5.2.6"
+    "@emotion/cache" "^11.11.0"
+    "@emotion/react" "^11.11.1"
+    "@emotion/styled" "^11.11.0"
+    antd "^5.10.0"
+    react "^18.2.0"
+    react-dom "^18.2.0"
+    react-webcam "^7.1.1"
+
 "@leichtgewicht/ip-codec@^2.0.1":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"
@@ -4594,6 +4608,11 @@ react-router@6.18.0:
   integrity sha512-vk2y7Dsy8wI02eRRaRmOs9g2o+aE72YCx5q9VasT1N9v+lrdB79tIqrjMfByHiY5+6aYkH2rUa5X839nwWGPDg==
   dependencies:
     "@remix-run/router" "1.11.0"
+
+react-webcam@^7.1.1:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/react-webcam/-/react-webcam-7.2.0.tgz#64141c4c7bdd3e956620500187fa3fcc77e1fd49"
+  integrity sha512-xkrzYPqa1ag2DP+2Q/kLKBmCIfEx49bVdgCCCcZf88oF+0NPEbkwYk3/s/C7Zy0mhM8k+hpdNkBLzxg8H0aWcg==
 
 react@^18.2.0:
   version "18.2.0"

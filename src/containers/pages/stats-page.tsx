@@ -1,0 +1,1 @@
+import { FC } from 'react';export const StatsPage: FC = () => {  return (    <div>      <span>s</span>    </div>  );};

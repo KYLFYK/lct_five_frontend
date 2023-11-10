@@ -1,0 +1,1 @@
+export const BASE_DATE_FORMAT_STRING = 'DD.MM.YYYY HH:mm';

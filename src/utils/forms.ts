@@ -1,0 +1,1 @@
+import { Rule } from 'rc-field-form/lib/interface';export const FORM_COMMON_RULES: Record<'required', Rule> = {  required: {    required: true,    message: 'Поле обязательно для заполнения',  },} as const;

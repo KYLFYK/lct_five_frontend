@@ -2,6 +2,7 @@ const path = require('path');
 const webpackConfig = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 // require('dotenv').config({ path: `.env.${process.env.ENV}` });
 
@@ -19,6 +20,26 @@ const plugins = [
   }),
   new HtmlWebpackPlugin({
     template: path.join(__dirname, 'src', 'index.html'),
+  }),
+  new CopyPlugin({
+    patterns: [
+      {
+        from: path.join(
+          __dirname,
+          'node_modules/@kylfyk/plai_player',
+          'dist/models'
+        ),
+        to: path.resolve(__dirname, 'dist/models'),
+      },
+      {
+        from: path.join(
+          __dirname,
+          'node_modules/@kylfyk/plai_player',
+          'dist/321.index.js'
+        ),
+        to: path.resolve(__dirname, 'dist/321.index.js'),
+      },
+    ],
   }),
 ];
 
@@ -42,14 +63,26 @@ module.exports = {
         },
       }),
     ],
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          name: 'vendors',
+          test: /node_modules/,
+          chunks: 'all',
+          enforce: true,
+          usedExports: true,
+        },
+      },
+    },
   },
   devtool: IS_PRODUCTION ? false : 'source-map',
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[contenthash].js',
-    assetModuleFilename: 'assets/[contenthash][ext][query]',
+    filename: '[name].js',
+    assetModuleFilename: 'assets/[ext][query]',
     clean: true,
+    publicPath: '/',
   },
   devServer: {
     host: '0.0.0.0',
