@@ -7,6 +7,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 // require('dotenv').config({ path: `.env.${process.env.ENV}` });
 
 const CURRENT_ENV = process.env.ENV;
+const isDocsRoot = process.env.FOLDER === 'docs';
 
 const IS_PRODUCTION = CURRENT_ENV === 'production';
 
@@ -29,7 +30,7 @@ const plugins = [
           'node_modules/@kylfyk/plai_player',
           'dist/models'
         ),
-        to: path.resolve(__dirname, 'dist/models'),
+        to: path.resolve(__dirname, isDocsRoot ? 'docs/models' : 'dist/models'),
       },
       {
         from: path.join(
@@ -37,7 +38,10 @@ const plugins = [
           'node_modules/@kylfyk/plai_player',
           'dist/321.index.js'
         ),
-        to: path.resolve(__dirname, 'dist/321.index.js'),
+        to: path.resolve(
+          __dirname,
+          isDocsRoot ? 'docs/321.index.js' : 'dist/321.index.js'
+        ),
       },
     ],
   }),
@@ -78,7 +82,7 @@ module.exports = {
   devtool: IS_PRODUCTION ? false : 'source-map',
   target: 'web',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, isDocsRoot ? 'docs' : 'dist'),
     filename: '[name].js',
     assetModuleFilename: 'assets/[ext][query]',
     clean: true,
