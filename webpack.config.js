@@ -86,7 +86,7 @@ module.exports = {
     filename: '[name].js',
     assetModuleFilename: 'assets/[ext][query]',
     clean: true,
-    publicPath: '/',
+    publicPath: '/lct_five_frontend/',
   },
   devServer: {
     host: '0.0.0.0',
