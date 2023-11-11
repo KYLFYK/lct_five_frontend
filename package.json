@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/KYLFYK/lct_five_frontend.git",
+  "homepage": "https://kylfyk.github.io/lct_five_frontend/",
   "author": "NT2.0",
   "license": "MIT",
   "private": false,
@@ -13,7 +14,9 @@
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "version:patch": "yarn version --patch",
     "version:minor": "yarn version --minor",
-    "version:major": "yarn version --major"
+    "version:major": "yarn version --major",
+    "build:git": "npx cross-env ENV=production FOLDER=docs webpack",
+    "deploy": "gh-pages -d docs"
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
