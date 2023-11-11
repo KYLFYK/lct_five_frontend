@@ -21,6 +21,7 @@ const plugins = [
   }),
   new HtmlWebpackPlugin({
     template: path.join(__dirname, 'src', 'index.html'),
+    publicPath: '/lct_five_frontend',
   }),
   new CopyPlugin({
     patterns: [
@@ -86,7 +87,7 @@ module.exports = {
     filename: '[name].js',
     assetModuleFilename: 'assets/[ext][query]',
     clean: true,
-    publicPath: '/lct_five_frontend/',
+    publicPath: '/',
   },
   devServer: {
     host: '0.0.0.0',
