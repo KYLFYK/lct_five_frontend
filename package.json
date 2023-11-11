@@ -22,6 +22,7 @@
     "@emotion/styled": "^11.11.0",
     "@kylfyk/plai_player": "^1.0.3",
     "antd": "^5.10.0",
+    "axios": "^1.6.1",
     "dayjs": "1.11.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
