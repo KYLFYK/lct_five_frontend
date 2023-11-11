@@ -16,7 +16,7 @@
     "version:minor": "yarn version --minor",
     "version:major": "yarn version --major",
     "build:git": "npx cross-env ENV=production FOLDER=docs webpack",
-    "deploy": "yarn build:git && gh-pages -d build"
+    "deploy": "gh-pages -d docs"
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
