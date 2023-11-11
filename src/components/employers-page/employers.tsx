@@ -57,10 +57,63 @@ const statisticSource: TUserStatistics = {
                             playStartDate: '2023-01-01T00:15:00Z',
                             playCompleteDate: '2023-01-01T00:45:00Z',
                             pausesDates: [
-                                {
-                                    start: '2023-01-01T00:30:00Z',
-                                    end: '2023-01-01T00:35:00Z',
-                                },
+                                { start: '2023-01-01T00:30:00Z', end: '2023-01-01T00:35:00Z' },
+                                { start: '2023-01-01T00:40:00Z', end: '2023-01-01T00:42:00Z' },
+                                { start: '2023-01-01T00:50:00Z', end: '2023-01-01T00:55:00Z' },
+                                { start: '2023-01-01T01:05:00Z', end: '2023-01-01T01:10:00Z' },
+                                { start: '2023-01-01T01:15:00Z', end: '2023-01-01T01:20:00Z' },
+                                { start: '2023-01-01T01:25:00Z', end: '2023-01-01T01:30:00Z' },
+                                { start: '2023-01-01T01:35:00Z', end: '2023-01-01T01:40:00Z' },
+                                { start: '2023-01-01T01:45:00Z', end: '2023-01-01T01:50:00Z' },
+                                // Add more pausesDates if needed
+                            ],
+                            averageAttention: [
+                                {value: 80},
+                                {value: 75},
+                                {value: 85},
+                                {value: 90},
+                            ],
+                        },
+                        {
+                            status: 'completed',
+                            duration: 3600,
+                            viewingGuarantee: true,
+                            playStartDate: '2023-01-01T00:15:00Z',
+                            playCompleteDate: '2023-01-01T00:45:00Z',
+                            pausesDates: [
+                                { start: '2023-01-01T00:30:00Z', end: '2023-01-01T00:35:00Z' },
+                                { start: '2023-01-01T00:40:00Z', end: '2023-01-01T00:42:00Z' },
+                                { start: '2023-01-01T00:50:00Z', end: '2023-01-01T00:55:00Z' },
+                                { start: '2023-01-01T01:05:00Z', end: '2023-01-01T01:10:00Z' },
+                                { start: '2023-01-01T01:15:00Z', end: '2023-01-01T01:20:00Z' },
+                                { start: '2023-01-01T01:25:00Z', end: '2023-01-01T01:30:00Z' },
+                                { start: '2023-01-01T01:35:00Z', end: '2023-01-01T01:40:00Z' },
+                                { start: '2023-01-01T01:45:00Z', end: '2023-01-01T01:50:00Z' },
+                                // Add more pausesDates if needed
+                            ],
+                            averageAttention: [
+                                {value: 80},
+                                {value: 75},
+                                {value: 85},
+                                {value: 90},
+                            ],
+                        },
+                        {
+                            status: 'completed',
+                            duration: 3600,
+                            viewingGuarantee: true,
+                            playStartDate: '2023-01-01T00:15:00Z',
+                            playCompleteDate: '2023-01-01T00:45:00Z',
+                            pausesDates: [
+                                { start: '2023-01-01T00:30:00Z', end: '2023-01-01T00:35:00Z' },
+                                { start: '2023-01-01T00:40:00Z', end: '2023-01-01T00:42:00Z' },
+                                { start: '2023-01-01T00:50:00Z', end: '2023-01-01T00:55:00Z' },
+                                { start: '2023-01-01T01:05:00Z', end: '2023-01-01T01:10:00Z' },
+                                { start: '2023-01-01T01:15:00Z', end: '2023-01-01T01:20:00Z' },
+                                { start: '2023-01-01T01:25:00Z', end: '2023-01-01T01:30:00Z' },
+                                { start: '2023-01-01T01:35:00Z', end: '2023-01-01T01:40:00Z' },
+                                { start: '2023-01-01T01:45:00Z', end: '2023-01-01T01:50:00Z' },
+                                // Add more pausesDates if needed
                             ],
                             averageAttention: [
                                 {value: 80},
@@ -110,7 +163,7 @@ const statisticSource: TUserStatistics = {
             ],
         },
         {
-            testId: 'TestId1',
+            testId: 'TestId2',
             userId: '1',
             username: 'Пузиков Виктор Андреевич',
             status: 'complete',
@@ -128,12 +181,6 @@ const statisticSource: TUserStatistics = {
                             viewingGuarantee: true,
                             playStartDate: '2023-01-01T00:15:00Z',
                             playCompleteDate: '2023-01-01T00:45:00Z',
-                            pausesDates: [
-                                {
-                                    start: '2023-01-01T00:30:00Z',
-                                    end: '2023-01-01T00:35:00Z',
-                                },
-                            ],
                             averageAttention: [
                                 {value: 80},
                                 {value: 75},
@@ -187,7 +234,7 @@ const statisticSource: TUserStatistics = {
                     dateComplete: '2023-01-01T01:00:00Z',
                     videoStats: [
                         {
-                            status: 'completed',
+                            status: 'not-started',
                             duration: 3600,
                             viewingGuarantee: true,
                             playStartDate: '2023-01-01T00:15:00Z',
