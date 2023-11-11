@@ -13,9 +13,7 @@
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "version:patch": "yarn version --patch",
     "version:minor": "yarn version --minor",
-    "version:major": "yarn version --major",
-    "build:git": "npx cross-env ENV=production FOLDER=docs webpack",
-    "deploy": "gh-pages -d docs"
+    "version:major": "yarn version --major"
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
@@ -47,7 +45,6 @@
     "css-loader": "^6.8.1",
     "dotenv": "^16.3.1",
     "file-loader": "^6.2.0",
-    "gh-pages": "^6.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
     "prettier": "^3.0.3",
