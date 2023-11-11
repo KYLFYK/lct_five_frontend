@@ -1,0 +1,1 @@
+export const sortByOptionalOrder: <  T extends {    order?: number;  },>(  a: T,  b: T) => number = (a, b) => {  if (a.order === b.order) {    return 0;  }  if (a.order === undefined) {    return 1;  } else if (b.order === undefined) {    return -1;  }  return a.order - b.order;};
