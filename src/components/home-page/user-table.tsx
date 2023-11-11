@@ -4,13 +4,14 @@ import { ColumnsType } from 'antd/lib/table';
 import { TTabledUser } from '../../types/user';
 import UserOutlined from "@ant-design/icons/lib/icons/UserOutlined";
 import dayjs from "dayjs";
-import {BASE_DATE_FORMAT_STRING} from "../../constants/patterns";
+import { BASE_DATE_FORMAT_STRING } from "../../constants/patterns";
 
 type TTableRecordCallback<T> = (record: T) => unknown;
 
 export const userColumns: <T extends TTabledUser>(props: {
     onStats?: TTableRecordCallback<T>;
-}) => ColumnsType<T> = ({ onStats }) => [
+    status?: boolean;
+}) => ColumnsType<T> = ({ onStats, status }) => [
     {
         title: 'Фамилия',
         dataIndex: 'surname',
@@ -49,24 +50,31 @@ export const userColumns: <T extends TTabledUser>(props: {
         },
         render: (value) => dayjs(value).format(BASE_DATE_FORMAT_STRING),
     },
+    ...(status
+        ? [
+            {
+                title: 'Статус',
+                dataIndex: 'status',
+                key: 'status',
+            }
+        ]
+        : []),
     {
         title: '',
         dataIndex: 'actions',
         key: 'actions',
-        render: (_, record) => {
-            return (
-                <Space size={8}>
-                    {onStats && (
-                        <Tooltip title="Узнать подробнее">
-                            <UserOutlined
-                                onClick={() => {
-                                    onStats(record);
-                                }}
-                            />
-                        </Tooltip>
-                    )}
-                </Space>
-            );
-        },
+        render: (_, record) => (
+            <Space size={8}>
+                {onStats && (
+                    <Tooltip title="Узнать подробнее">
+                        <UserOutlined
+                            onClick={() => {
+                                onStats(record);
+                            }}
+                        />
+                    </Tooltip>
+                )}
+            </Space>
+        ),
     },
 ];

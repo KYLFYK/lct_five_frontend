@@ -2,6 +2,7 @@ import {TTestByUserStatistic} from "./stats";
 
 export type TTabledUser = {
     key: string;
+    status?: string;
 } & TUser;
 
 export type TUser = {

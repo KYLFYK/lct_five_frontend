@@ -1,1 +1,1 @@
-import { FC } from 'react';export const StatsPage: FC = () => {  return (    <div>      <span>s</span>    </div>  );};
+import {FC,} from 'react';import {Stats} from "../../components/stats-page/stats";export const StatsPage: FC = () => {    return (        <div>            <Stats/>        </div>    );}
